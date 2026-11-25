@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peihang Li · Films</title>
+  <meta name="description" content="Films by Peihang Li, director and writer based in Los Angeles: The Red Whistle, The Breeze Blows Through Sahuan Valley, Little Journeys, Because of You, and earlier work.">
+  <meta property="og:title" content="Peihang Li · Films">
+  <meta property="og:description" content="Director and writer based in Los Angeles.">
+  <meta name="theme-color" content="#0b0c0b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <!-- Brush font, subset to the Chinese titles only -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap&text=红哨子微风吹过撒欢谷小远方因为遇见你十年，你好！我要成名李沛航">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <a class="skip" href="#films">Skip to films</a>
+
+  <!-- Blurred film stills behind the film sections; script.js swaps them as you scroll -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__layer"></div>
+    <div class="ambient__layer"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top">Peihang Li</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#films" data-nav="films">Films</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ OPENING: a letterboxed "screen" of frames from the films ============ -->
+    <section class="hero" data-ambient="none" data-accent="#e0b46a" aria-labelledby="hero-title">
+      <div class="hero__frame">
+        <div class="hero__slides">
+          <figure class="hero__slide is-on" data-film="breeze" data-no="02" data-title="The Breeze Blows Through Sahuan Valley" data-zh="微风吹过撒欢谷" data-year="2023" data-accent="#e0b46a" style="--fx:4% 50%; --kx:-1.5%; --ky:0%">
+            <img src="assets/hero/01-lantern.jpg" alt="Two lit windows strung with lights at night: a boy at his desk, an old man at his table. From The Breeze Blows Through Sahuan Valley.">
+          </figure>
+          <figure class="hero__slide" data-film="red-whistle" data-no="01" data-title="The Red Whistle" data-zh="红哨子" data-year="2024" data-accent="#d9584a" style="--fx:43% 50%; --kx:0%; --ky:1%">
+            <img src="assets/hero/02-forest.jpg" alt="Two boys walk a forest path in soft, hazy sunlight. From The Red Whistle." decoding="async">
+          </figure>
+          <figure class="hero__slide" data-film="breeze" data-no="02" data-title="The Breeze Blows Through Sahuan Valley" data-zh="微风吹过撒欢谷" data-year="2023" data-accent="#e0b46a" style="--fx:61% 50%; --kx:1.5%; --ky:0%">
+            <img src="assets/hero/03-balloon.jpg" alt="An old man and a girl make faces at a window, a red balloon beside them. From The Breeze Blows Through Sahuan Valley." decoding="async">
+          </figure>
+          <figure class="hero__slide" data-film="little-journeys" data-no="03" data-title="Little Journeys" data-zh="小远方" data-year="2021" data-accent="#a9c27e" style="--fx:27% 50%; --kx:-1.5%; --ky:0%">
+            <img src="assets/hero/04-horses.jpg" alt="Horses run across the grassland of Inner Mongolia. From Little Journeys." decoding="async">
+          </figure>
+          <figure class="hero__slide" data-film="because-of-you" data-no="04" data-title="Because of You" data-zh="因为遇见你" data-year="2020" data-accent="#92aed3" style="--fx:62% 50%; --kx:1%; --ky:0%">
+            <img src="assets/hero/05-oldhouse.jpg" alt="An old building with laundry on its balcony, seen from above through leaves. From Because of You." decoding="async">
+          </figure>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <span class="hero__mark hero__mark--tl" aria-hidden="true"></span>
+        <span class="hero__mark hero__mark--tr" aria-hidden="true"></span>
+        <span class="hero__mark hero__mark--bl" aria-hidden="true"></span>
+        <span class="hero__mark hero__mark--br" aria-hidden="true"></span>
+
+      </div>
+
+      <div class="hero__progress" role="group" aria-label="Frames from the films">
+        <button type="button" aria-label="The Breeze Blows Through Sahuan Valley: windows at night"></button>
+        <button type="button" aria-label="The Red Whistle: two boys in the forest"></button>
+        <button type="button" aria-label="The Breeze Blows Through Sahuan Valley: faces at the window"></button>
+        <button type="button" aria-label="Little Journeys: horses on the grassland"></button>
+        <button type="button" aria-label="Because of You: the old building"></button>
+      </div>
+
+      <div class="hero__meta">
+        <div class="hero__title">
+          <h1 id="hero-title">Peihang Li <span lang="zh">李沛航</span></h1>
+          <p class="eyebrow">Director &amp; Writer · Los Angeles</p>
+        </div>
+        <a class="hero__caption" href="#breeze">
+          <span class="hero__count">02</span>
+          <span class="hero__film">The Breeze Blows Through Sahuan Valley <span lang="zh">微风吹过撒欢谷</span></span>
+          <span class="hero__year">2023</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ============ FILM LINEUP ============ -->
+    <section class="lineup" id="films" data-ambient="none" data-accent="#d9c9a8" aria-labelledby="films-title">
+      <header class="section-head">
+        <h2 id="films-title">Selected films</h2>
+        <span>2020 — 2024</span>
+      </header>
+      <ol class="lineup__grid">
+        <li><a class="lineup__item" href="#red-whistle" style="--accent:#d9584a">
+          <figure class="poster poster--lineup" style="--focus:33% 50%; --zh-size:13cqh">
+            <img src="assets/hero/02-tunnel.jpg" alt="" loading="lazy">
+            <span class="poster__zh" lang="zh">红哨子</span>
+            <figcaption class="poster__en"><span>The Red Whistle</span><span>2024</span></figcaption>
+          </figure>
+          <span class="lineup__no">01</span>
+          <span class="lineup__title">The Red Whistle</span>
+          <span class="lineup__meta">Narrative short · Writer &amp; Director</span>
+        </a></li>
+        <li><a class="lineup__item" href="#breeze" style="--accent:#e0b46a">
+          <figure class="poster poster--lineup" style="--focus:100% 50%; --zh-size:8.6cqh">
+            <img src="assets/hero/03-meadow.jpg" alt="" loading="lazy">
+            <span class="poster__zh" lang="zh">微风吹过撒欢谷</span>
+            <figcaption class="poster__en"><span>The Breeze Blows Through Sahuan Valley</span><span>2023</span></figcaption>
+          </figure>
+          <span class="lineup__no">02</span>
+          <span class="lineup__title">The Breeze Blows Through Sahuan Valley</span>
+          <span class="lineup__meta">Narrative short · Co-writer &amp; Co-director</span>
+        </a></li>
+        <li><a class="lineup__item" href="#little-journeys" style="--accent:#a9c27e">
+          <figure class="poster poster--lineup" style="--focus:72% 50%; --zh-size:13cqh">
+            <img src="assets/hero/lj-sunset.jpg" alt="" loading="lazy">
+            <span class="poster__zh" lang="zh">小远方</span>
+            <figcaption class="poster__en"><span>Little Journeys</span><span>2021</span></figcaption>
+          </figure>
+          <span class="lineup__no">03</span>
+          <span class="lineup__title">Little Journeys</span>
+          <span class="lineup__meta">Documentary series · Co-director &amp; Organizer</span>
+        </a></li>
+        <li><a class="lineup__item" href="#because-of-you" style="--accent:#92aed3">
+          <figure class="poster poster--lineup" style="--focus:62% 50%; --zh-size:10.5cqh">
+            <img src="assets/stills/because-of-you/still-05.jpg" alt="" loading="lazy">
+            <span class="poster__zh" lang="zh">因为遇见你</span>
+            <figcaption class="poster__en"><span>Because of You</span><span>2020</span></figcaption>
+          </figure>
+          <span class="lineup__no">04</span>
+          <span class="lineup__title">Because of You</span>
+          <span class="lineup__meta">Short film · Director</span>
+        </a></li>
+      </ol>
+      <p class="lineup__more"><a class="text-link text-link--quiet" href="#earlier">Earlier work · Hello, Decade · My Name Is Fame · A Secret ↓</a></p>
+    </section>
+
+    <!-- ============ 01 THE RED WHISTLE ============ -->
+    <section class="film" id="red-whistle" data-ambient="assets/ambient/red-whistle.jpg" data-accent="#d9584a" style="--accent:#d9584a" aria-labelledby="rw-title">
+      <div class="film__aside">
+        <figure class="poster" style="--focus:45% 50%; --zh-size:13cqh">
+          <img src="assets/stills/red-whistle/still-01.jpg" alt="">
+          <span class="poster__zh" lang="zh">红哨子</span>
+          <figcaption class="poster__en"><span>The Red Whistle</span><span>2024</span></figcaption>
+        </figure>
+        <div class="film__info">
+          <p class="film__meta"><b>01</b> / Narrative short · 2024</p>
+          <h2 class="film__title" id="rw-title">The Red Whistle <span lang="zh">红哨子</span></h2>
+          <p class="film__role">Writer &amp; Director</p>
+        </div>
+        <p class="film__logline">Two boys take a red whistle into the forest and find their courage along the way.</p>
+        <div class="film__actions">
+          <button class="text-link" type="button" data-watch="rw-player">Watch the film</button>
+          <a class="text-link text-link--quiet" href="https://vimeo.com/1023095891" target="_blank" rel="noopener">Vimeo ↗</a>
+        </div>
+        <a class="film__next" href="#breeze">Next: The Breeze Blows Through Sahuan Valley <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="film__panel">
+        <section class="block">
+          <header class="block__head"><h3>The film</h3><span>15:00</span></header>
+          <div class="player" id="rw-player" data-vimeo="1023095891" data-title="The Red Whistle" style="--ratio:1280/544">
+            <img src="assets/stills/red-whistle/cover.jpg" alt="Title card of The Red Whistle" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play The Red Whistle, 15 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">Play film · 15:00</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>Stills</h3><span>Into the forest</span></header>
+          <div class="stills" style="--r:925/422">
+            <button class="still still--full" type="button"><img src="assets/stills/red-whistle/still-05.jpg" alt="Two boys walk a narrow path through the forest" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/red-whistle/still-01.jpg" alt="A boy holds the red whistle among green leaves" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/red-whistle/still-09.jpg" alt="A boy looks up through bare branches" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/red-whistle/still-02.jpg" alt="The boys cross a stone wall under the trees" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/red-whistle/still-06.jpg" alt="Close-up of a boy in glasses with something red at his lips" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/red-whistle/still-07.jpg" alt="A boy with a backpack stands deep in the woods" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/red-whistle/still-03.jpg" alt="Figures climbing a wooded slope" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/red-whistle/still-04.jpg" alt="A boy in white seen past a blurred shoulder" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/red-whistle/still-08.jpg" alt="Low angle of a boy against the sky and trees" loading="lazy"></button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>About the film</h3><span>Synopsis</span></header>
+          <div class="prose">
+            <p>Two boys set off on an adventure into the forest, carrying a red whistle. Out in the wild, untamed woods they discover courage, and something of what it means to grow up.</p>
+            <p>A film about friendship, bravery, and finding out who you are.</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Writer &amp; Director</dd></div>
+            <div><dt>Year</dt><dd>2024</dd></div>
+            <div><dt>Runtime</dt><dd>15 min</dd></div>
+            <div><dt>Form</dt><dd>Narrative short</dd></div>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ 02 THE BREEZE ============ -->
+    <section class="film" id="breeze" data-ambient="assets/ambient/breeze.jpg" data-accent="#e0b46a" style="--accent:#e0b46a" aria-labelledby="br-title">
+      <div class="film__aside">
+        <figure class="poster" style="--focus:38% 50%; --zh-size:8.6cqh">
+          <img src="assets/stills/breeze/still-06.jpg" alt="">
+          <span class="poster__zh" lang="zh">微风吹过撒欢谷</span>
+          <figcaption class="poster__en"><span>The Breeze Blows Through Sahuan Valley</span><span>2023</span></figcaption>
+        </figure>
+        <div class="film__info">
+          <p class="film__meta"><b>02</b> / Narrative short · 2023</p>
+          <h2 class="film__title" id="br-title">The Breeze Blows Through Sahuan Valley <span lang="zh">微风吹过撒欢谷</span></h2>
+          <p class="film__role">Co-writer &amp; Co-director</p>
+        </div>
+        <p class="film__logline">A narrative short about depression among Chinese teenagers, and why it needs to be talked about.</p>
+        <div class="film__actions">
+          <button class="text-link" type="button" data-watch="br-player">Watch the film</button>
+          <a class="text-link text-link--quiet" href="https://vimeo.com/1023314397" target="_blank" rel="noopener">Vimeo ↗</a>
+        </div>
+        <a class="film__next" href="#little-journeys">Next: Little Journeys <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="film__panel">
+        <section class="block">
+          <header class="block__head"><h3>The film</h3><span>29:25</span></header>
+          <div class="player" id="br-player" data-vimeo="1023314397" data-title="The Breeze Blows Through Sahuan Valley" style="--ratio:16/9">
+            <img src="assets/stills/breeze/cover.jpg" alt="Two lit windows of a house at night, strung with lights" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play The Breeze Blows Through Sahuan Valley, 29 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">Play film · 29:25</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>Stills</h3><span>Rooms, windows, rain</span></header>
+          <div class="stills" style="--r:832/350">
+            <button class="still still--full" type="button"><img src="assets/stills/breeze/still-02.jpg" alt="A grandfather and a boy in a sunlit living room" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/breeze/still-06.jpg" alt="A boy's face behind a rain-streaked window" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/breeze/still-05.jpg" alt="An old man and a boy smile beside a red balloon" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/breeze/still-01.jpg" alt="A girl and a boy sit together in tall grass" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/breeze/still-03.jpg" alt="Two people at a table outside a house, framed by leaves" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/breeze/still-08.jpg" alt="Two figures on a porch at night" loading="lazy"></button>
+            <button class="still still--full" type="button"><img src="assets/stills/breeze/still-04.jpg" alt="A dim room with a lamp; outside the window, a man with a bicycle" loading="lazy"></button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>About the film</h3><span>Synopsis</span></header>
+          <div class="prose">
+            <p>A narrative film about depression among Chinese adolescents. It sets out to shed light on young people's mental health, and on the need to talk about it openly.</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>Festivals</h3><span>Screenings</span></header>
+          <ul class="list">
+            <li>CMS International Children's Film Festival (ICFF)</li>
+            <li>Lift-Off First-Time Filmmaker Sessions, 2024</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Co-writer &amp; Co-director</dd></div>
+            <div><dt>Year</dt><dd>2023</dd></div>
+            <div><dt>Runtime</dt><dd>29 min</dd></div>
+            <div><dt>Form</dt><dd>Narrative short</dd></div>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ 03 LITTLE JOURNEYS ============ -->
+    <section class="film" id="little-journeys" data-ambient="assets/ambient/little-journeys.jpg" data-accent="#a9c27e" style="--accent:#a9c27e" aria-labelledby="lj-title">
+      <div class="film__aside">
+        <figure class="poster" style="--focus:37% 50%; --zh-size:13cqh">
+          <img src="assets/stills/little-journeys/still-02.jpg" alt="">
+          <span class="poster__zh" lang="zh">小远方</span>
+          <figcaption class="poster__en"><span>Little Journeys</span><span>2021</span></figcaption>
+        </figure>
+        <div class="film__info">
+          <p class="film__meta"><b>03</b> / Documentary series · 2021</p>
+          <h2 class="film__title" id="lj-title">Little Journeys <span lang="zh">小远方</span></h2>
+          <p class="film__role">Co-director &amp; Organizer</p>
+        </div>
+        <p class="film__logline">Inner Mongolia, through the eyes of eighteen-year-olds on their first journey alone.</p>
+        <div class="film__actions">
+          <button class="text-link" type="button" data-watch="lj-player">Watch the film</button>
+          <a class="text-link text-link--quiet" href="https://vimeo.com/1022206630" target="_blank" rel="noopener">Vimeo ↗</a>
+        </div>
+        <a class="film__next" href="#because-of-you">Next: Because of You <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="film__panel">
+        <section class="block">
+          <header class="block__head"><h3>The film</h3><span>33:39</span></header>
+          <div class="player" id="lj-player" data-vimeo="1022206630" data-title="Little Journeys" style="--ratio:16/9">
+            <img src="assets/stills/little-journeys/cover.jpg" alt="Aerial view of a road through dark forest" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play Little Journeys, 34 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">Play film · 33:39</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>Stills</h3><span>Grassland, road, horses</span></header>
+          <div class="stills" style="--r:832/391">
+            <button class="still still--full" type="button"><img src="assets/stills/little-journeys/still-08.jpg" alt="Horses run across the grassland between two trees" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/little-journeys/still-02.jpg" alt="A young woman in white points at the sky in a golden field" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/little-journeys/still-07.jpg" alt="Two figures walk through the hills at sunset" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/little-journeys/still-05.jpg" alt="A young woman in a white cap sits in the grass" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/little-journeys/still-04.jpg" alt="A horse beside a farmhouse under a stormy sky" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/little-journeys/still-06.jpg" alt="Wide grassland with grazing horses and two small figures" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/little-journeys/still-01.jpg" alt="Two travellers walk down the middle of an empty road" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/little-journeys/still-03.jpg" alt="Sun over a green and gold valley" loading="lazy"></button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>About the series</h3><span>Synopsis</span></header>
+          <div class="prose">
+            <p>A youth documentary project that travelled across Inner Mongolia, seeing the world through the eyes of eighteen-year-olds. The series shows the vast landscapes, natural beauty and cultural diversity of the region from a young person's point of view.</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Co-director &amp; Organizer</dd></div>
+            <div><dt>Year</dt><dd>2021</dd></div>
+            <div><dt>Location</dt><dd>Inner Mongolia</dd></div>
+            <div><dt>Form</dt><dd>Documentary series</dd></div>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ 04 BECAUSE OF YOU ============ -->
+    <section class="film" id="because-of-you" data-ambient="assets/ambient/because-of-you.jpg" data-accent="#92aed3" style="--accent:#92aed3" aria-labelledby="by-title">
+      <div class="film__aside">
+        <figure class="poster" style="--focus:26% 50%; --zh-size:10.5cqh">
+          <img src="assets/stills/because-of-you/still-02.jpg" alt="">
+          <span class="poster__zh" lang="zh">因为遇见你</span>
+          <figcaption class="poster__en"><span>Because of You</span><span>2020</span></figcaption>
+        </figure>
+        <div class="film__info">
+          <p class="film__meta"><b>04</b> / Short film · 2020</p>
+          <h2 class="film__title" id="by-title">Because of You <span lang="zh">因为遇见你</span></h2>
+          <p class="film__role">Director</p>
+        </div>
+        <p class="film__logline">A short film about household registration and access to schooling in Beijing.</p>
+        <div class="film__actions">
+          <button class="text-link" type="button" data-watch="by-player">Watch the film</button>
+          <a class="text-link text-link--quiet" href="https://vimeo.com/1022184359" target="_blank" rel="noopener">Vimeo ↗</a>
+        </div>
+        <a class="film__next" href="#earlier">Next: Earlier work <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="film__panel">
+        <section class="block">
+          <header class="block__head"><h3>The film</h3><span>23:08</span></header>
+          <div class="player" id="by-player" data-vimeo="1022184359" data-title="Because of You" style="--ratio:16/9">
+            <img src="assets/stills/because-of-you/cover.jpg" alt="Aerial view of Beijing apartment blocks" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play Because of You, 23 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">Play film · 23:08</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>Stills</h3><span>Families and schools</span></header>
+          <div class="stills" style="--r:912/406">
+            <button class="still still--full" type="button"><img src="assets/stills/because-of-you/still-02.jpg" alt="A schoolgirl and a younger girl at a school gate" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/because-of-you/still-05.jpg" alt="A father drives his daughter on a scooter" loading="lazy"></button>
+            <button class="still still--half" type="button"><img src="assets/stills/because-of-you/still-04.jpg" alt="A man sits across a desk from an official" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/because-of-you/still-01.jpg" alt="A man crouches on a path, looking at his phone" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/because-of-you/still-03.jpg" alt="An old low-rise building behind leaves" loading="lazy"></button>
+            <button class="still" type="button"><img src="assets/stills/because-of-you/still-06.jpg" alt="A young woman wearing a VR headset" loading="lazy"></button>
+          </div>
+        </section>
+
+        <section class="block">
+          <header class="block__head"><h3>About the film</h3><span>Synopsis</span></header>
+          <div class="prose">
+            <p>A film about the challenges of household registration and education in Beijing, and what these systems mean for families and for children's futures.</p>
+            <p>Made as a public-service film for Yuquan Primary School in Beijing, and broadcast on CCTV-10.</p>
+          </div>
+        </section>
+
+        <section class="block">
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Director</dd></div>
+            <div><dt>Year</dt><dd>2020</dd></div>
+            <div><dt>Runtime</dt><dd>23 min</dd></div>
+            <div><dt>Made for</dt><dd>Yuquan Primary School, Beijing</dd></div>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ EARLIER WORK ============ -->
+    <section class="earlier" id="earlier" data-ambient="assets/ambient/earlier.jpg" data-accent="#d9c9a8" aria-labelledby="earlier-title">
+      <header class="section-head">
+        <h2 id="earlier-title">Earlier work</h2>
+        <span>Shorts and documentary</span>
+      </header>
+      <div class="cards">
+        <article class="card">
+          <div class="player player--card" data-vimeo="1022175831" data-title="Hello, Decade" style="--ratio:16/9">
+            <img src="assets/stills/hello-decade/cover.jpg" alt="Title card of Hello, Decade" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play Hello, Decade, 6 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">5:53</span>
+            </button>
+          </div>
+          <div class="card__body">
+            <p class="card__kicker">Short film · 2019</p>
+            <h3>Hello, Decade <span lang="zh">十年，你好！</span></h3>
+            <p class="card__role">Director, Writer &amp; Actor</p>
+            <p>A girl from a small town settles into big-city life with a boy's help. He goes abroad; ten years later, they meet again by chance.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="player player--card" data-vimeo="1022172786" data-title="My Name Is Fame" style="--ratio:16/9">
+            <img src="assets/stills/my-name-is-fame/cover.jpg" alt="Title card of My Name Is Fame" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play My Name Is Fame, 7 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">6:32</span>
+            </button>
+          </div>
+          <div class="card__body">
+            <p class="card__kicker">Documentary · 2019</p>
+            <h3>My Name Is Fame <span lang="zh">我要成名</span></h3>
+            <p class="card__role">Director</p>
+            <p>Liao Juan, a struggling actress, is about to give up when a phone call from Stephen Chow offers her a role in King of Comedy 2.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="player player--card" data-vimeo="1022559571" data-title="A Secret" style="--ratio:16/9">
+            <img src="assets/stills/a-secret/cover.jpg" alt="Title card of A Secret" loading="lazy">
+            <button class="player__btn" type="button" aria-label="Play A Secret, 2 minutes">
+              <span class="player__circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
+              <span class="player__label">2:15</span>
+            </button>
+          </div>
+          <div class="card__body">
+            <p class="card__kicker">Short</p>
+            <h3>A Secret</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" data-ambient="assets/ambient/intro.jpg" data-accent="#d9c9a8" aria-labelledby="about-title">
+      <figure class="about__photo">
+        <img src="assets/about/portrait.jpg" alt="Portrait of Peihang Li" loading="lazy">
+      </figure>
+      <div class="about__text">
+        <h2 class="section-label" id="about-title">About</h2>
+        <p class="about__lede">I'm a director and writer based in Los Angeles, currently in the MFA program in Film and Television Production at the USC School of Cinematic Arts.</p>
+        <p class="about__body">Before USC, I studied film at the School of Visual Arts in New York. Many of my films follow children and young people, and the families and places around them. Alongside filmmaking, I research how directors make decisions and keep authorship when they work with generative AI.</p>
+
+        <div class="cv">
+          <div>
+            <h3>Education</h3>
+            <ul>
+              <li><b>USC School of Cinematic Arts</b><span>MFA, Film &amp; Television Production · 2026–</span></li>
+              <li><b>School of Visual Arts, New York</b><span>BFA in Film, with Honors · 2021–2025</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Research</h3>
+            <ul>
+              <li><b>Directorial judgment and authorship with generative AI</b><span>Human–AI collaboration in screenwriting and production</span></li>
+              <li><b>Research collaboration, Cornell University</b><span>With Professor Qian Yang · 2026–</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Experience</h3>
+            <ul>
+              <li><b>Creative Director, YAH True Health and Wellness</b><span>Short videos, New York · 2025</span></li>
+              <li><b>Creative Director, Nashi Cultural Communication</b><span>Short-form narrative videos, Beijing · 2023–2024</span></li>
+              <li><b>Teaching Assistant, School of Visual Arts</b><span>Screenwriting, adaptation and television · 2024–2025</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" data-ambient="assets/ambient/intro.jpg" data-accent="#d9c9a8" aria-labelledby="contact-title">
+      <h2 class="section-label" id="contact-title">Contact</h2>
+      <p class="contact__line">For screenings, collaborations, or a conversation about films:</p>
+      <div class="contact__links">
+        <a class="contact__big" href="mailto:peihangl@usc.edu">peihangl@usc.edu</a>
+        <button class="text-link text-link--quiet" type="button" data-copy="peihangl@usc.edu">Copy email</button>
+      </div>
+      <p class="contact__more"><a class="text-link text-link--quiet" href="https://vimeo.com/peihangli" target="_blank" rel="noopener">vimeo.com/peihangli ↗</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span data-this-year>2026</span> Peihang Li</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- Floating "all films" button -->
+  <button class="fab" type="button" data-open-index aria-haspopup="dialog">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></svg>
+    <span>All films</span>
+  </button>
+
+  <dialog class="index" aria-label="All films">
+    <div class="index__inner">
+      <header class="index__head">
+        <p class="eyebrow">All films</p>
+        <button class="icon-btn" type="button" data-close aria-label="Close">✕</button>
+      </header>
+      <ul class="index__grid">
+        <li><a href="#red-whistle"><img src="assets/stills/red-whistle/still-05.jpg" alt="" loading="lazy"><span class="index__no">01</span><b>The Red Whistle</b><span>2024 · Writer &amp; Director</span></a></li>
+        <li><a href="#breeze"><img src="assets/stills/breeze/still-07.jpg" alt="" loading="lazy"><span class="index__no">02</span><b>The Breeze Blows Through Sahuan Valley</b><span>2023 · Co-writer &amp; Co-director</span></a></li>
+        <li><a href="#little-journeys"><img src="assets/stills/little-journeys/still-08.jpg" alt="" loading="lazy"><span class="index__no">03</span><b>Little Journeys</b><span>2021 · Co-director &amp; Organizer</span></a></li>
+        <li><a href="#because-of-you"><img src="assets/stills/because-of-you/still-02.jpg" alt="" loading="lazy"><span class="index__no">04</span><b>Because of You</b><span>2020 · Director</span></a></li>
+        <li><a href="#earlier"><img src="assets/stills/hello-decade/still-02.jpg" alt="" loading="lazy"><span class="index__no">05</span><b>Hello, Decade</b><span>2019 · Director, Writer &amp; Actor</span></a></li>
+        <li><a href="#earlier"><img src="assets/stills/my-name-is-fame/still-03.jpg" alt="" loading="lazy"><span class="index__no">06</span><b>My Name Is Fame</b><span>2019 · Director</span></a></li>
+        <li><a href="#earlier"><img src="assets/stills/a-secret/cover.jpg" alt="" loading="lazy"><span class="index__no">07</span><b>A Secret</b><span>Short</span></a></li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog class="lightbox" aria-label="Film still">
+    <figure class="lightbox__figure">
+      <img alt="">
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" data-step="-1" aria-label="Previous still">←</button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-step="1" aria-label="Next still">→</button>
+    <button class="icon-btn lightbox__close" type="button" data-close aria-label="Close">✕</button>
+  </dialog>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>
